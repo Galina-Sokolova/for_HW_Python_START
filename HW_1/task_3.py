@@ -15,8 +15,8 @@ while True:
             if num % i == 0:
                 result = f'Число {num} является составным'
                 break
-            else:
-                result = f'Число {num} является простым'
+        else:
+            result = f'Число {num} является простым'
         break
 print(result)
 
