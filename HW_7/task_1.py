@@ -12,7 +12,7 @@ __all__ = ['rename_files']
 def rename_files(new_filename: str, old_extension: str,
                  new_extension: str,):
 
-    way = Path(Path.cwd())
+    way = Path.cwd()
     count = 0
     for file in way.iterdir():
         if file.suffix[1:] == old_extension:
