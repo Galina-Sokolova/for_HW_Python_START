@@ -15,8 +15,7 @@ def decor_quadratic_equation(func: Callable):
         with open('random_number.csv', newline='') as csvfile:
             reader = csv.reader(csvfile)
             for line in reader:
-                a, b, c = line
-                res = func(float(a), float(b), float(c))
+                res = func(*map(float, line))
         return res
 
     return wrapper
