@@ -6,7 +6,7 @@ class CharacterRepetition:
     def __init__(self):
         self.text = input("Input text:  ")
 
-    def most_common_characters(self):
+    def most_common_character(self):
         text = self.text.translate(str.maketrans({'-': ' ', '.': '', ',': '', '—': ''})).split()
         result = {}
         for i in text:
@@ -19,4 +19,4 @@ class CharacterRepetition:
 
 
 new_text = CharacterRepetition()
-print(new_text.most_common_characters())
+print(new_text.most_common_character())
