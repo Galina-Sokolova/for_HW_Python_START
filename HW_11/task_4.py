@@ -34,17 +34,7 @@ class Matrix:
 
     def __eq__(self, other) -> bool:
         """Returns True if the matrix equals to other one"""
-        if self is other:
-            return True
-        if not isinstance(other, self.__class__):
-            raise TypeError("Not a 'Matrix'-type object")
-        if self._rows != other._rows or self._cols != other._cols:
-            return False
-        for j in range(self._rows):
-            for i in range(self._cols):
-                if self._matrix[j][i] != other._matrix[j][i]:
-                    return False
-        return True
+        return self._matrix == other._matrix
 
     def __str__(self):
         """User-readable representation method"""
